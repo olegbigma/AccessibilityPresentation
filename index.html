@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/material/styles/styles.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Accessibility</h1>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2>Accessibility</h2>
+        <p class="next"> возможность использования интерфейса всеми, независимо от физических и технических ограничений</p>
+        <div class="img"></div>
+        <style>
+            #cover {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;;
+            }
+            #cover .img{
+                opacity: 0.3;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(pictures/web-accessibility.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                filter: blur(1px);
+            }
+            #cover h2 {
+                margin: 0;
+                position: relative;
+                z-index: 2;
+                color: black;
+                text-align: center;
+                font-size: 80px;
+                font-weight: 700;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                color: black;
+                font-style: italic;
+                font-size: 28px;
+            }
+            .slide {
+                padding-top: 30px !important;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="scale">
+        <img src="pictures/scale.webp" alt="">
+        <style>
+            #scale img{
+                width: 90%;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="users">
+        <h3>Кому нужны доступные сайты?</h3>
+        <div class="columns three">
+            <div>
+                <h4>Нарушение зрения</h4>
+                <ul>
+                    <li>Полная утрата зрения</li>
+                    <li>Частичная утрата зрения</li>
+                    <li>Нарушение цветовосприятия</li>
+                </ul>
+                <img src="pictures/2.jpeg" alt="web-accessibility">
+            </div>
+            <div>
+                <h4>Нарушение опорно-двигательного аппарата</h4>
+                <ul>
+                    <li>Проблемы с моторикой</li>
+                    <li>Пользователи с временным ограничением возможностей</li>
+                </ul>
+                <img src="pictures/3.png" alt="web-accessibility">
+            </div>
+            <div>
+                <h4>Нарушение слуха</h4>
+                <ul>
+                    <li>Полная утрата слуха</li>
+                    <li>Частичная утрата слуха</li>
+                </ul>
+                <img src="pictures/1.jpeg" alt="web-accessibility">
+            </div>
+        </div>
+        <style>
+            #users {
+                font-size: 16px;
+                font-weight: 500;
+            }
+            #users h3{
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 16px;
+            }
+            #users h4 {
+                height: 64px;
+            }
+            #users ul {
+                height: 128px;
+            }
+            #users img{
+                display: block;
+                width: 60%;
+                margin: 0 auto;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="why">
+        <h3>Зачем ?</h3>
+        <ol>
+            <li class="next"><strong>Моральная</strong> - каждый должен иметь возможность пользоваться сайтами.</li>
+            <li class="next"><strong>Юридическая</strong> - доступность информации заложена в законодательстве многих стран.</li>
+            <li class="next"><strong>Финансовая</strong> - потенциальный клиент.</li>
+            <li class="next"><strong>Имиджевая</strong> - компания,  которая заботится о доступности своих сайтов - хорошая компания</li>
+        </ol>
+        <style>
+            #why h3{
+                text-align: center;
+            }
+            #why {
+                padding-right: 20px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="alternative">
+        <h3> Критерии доступности сайтов</h3>
+        <div class="columns four">
+            <ul>
+                <li>Хорошая контрастность текста и UI компонентов</li>
+                <li>Удобный размер шрифта и UI компонентов</li>
+                <li>Логически понятный интерфейс</li>
+            </ul>
+            <p class="next">Возможность доступа c клавиатуры</p>
+            <p class="next">Возможность пользования сайтом с помощью скринридера</p>
+            <p class="next">Доступность альтернативной подачи мультимедийного контента</p>
+        </div>
+        <style>
+            #alternative div {
+                font-size: 14px;
+            }
+            #alternative h3 {
+                text-align: center;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h3>Доступность с помощью клавиатуры</h3>
+        <ol>
+            <li class="next">Соблюдайте семантику.</li>
+            <li class="next">Соблюдайте упорядоченность HTML разметки.</li>
+            <li class="next">
+                Не отключайте focus ring
+                <br>
+                <code>
+                    input {
+                        outline: none;
+                    }
+                </code>
+            </li>
+            <li class="next">
+                Управление потоком
+                <br>
+                <code>
+                    tabindex='-1'
+                    <br>
+                    tabindex='0'
+                    <br>
+                    tabindex>'0'
+                </code>
+            </li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <ol>
+            <li value="5">
+                Focus management
+                <ul>
+                    <li>Закрытие модального окна при нажатии на Esc и клике на overlay</li>
+                    <li>Невозможность выхода фокуса за пределы модального окна</li>
+                    <li>Невозможность попадания фокуса в скрытые элементы</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h3>Взаимодействие с сайтом с помощью скринридера</h3>
+        <ol>
+            <li>Артибут <code>lang=""</code></li>
+            <li class="next">Указывайте <code>title</code> для страницы</li>
+            <li class="next">Атрибут <code>alt=""</code> для изображений</li>
+            <li class="next">
+                Используйте ARIA - атрибуты
+            </li>
+            <li class="next"> Указывайте тип данных у <code>input</code></li>
+            <li class="next"> Описывайте input с помощью <code>label</code></li>
+            <li class="next"> Соблюдайте правильную иерархию заголовков </li>
+            <li class="next">Старайтесь использовать встроенные html элементы</li>
+        </ol>
+    </section>
+
+    <section class="slide" id="aria">
+        <div class="slide-aria">
+            <h2>ARIA</h2>
+            <h4>Accessible Rich Internet Applications</h4>
+        </div>
+        <ul>
+            <li>Роли - для описания типов элемента</li>
+            <li>Атрибуты - для описания состояния и свойств элемента</li>
+        </ul>
+        <div class="columns two">
+            <div>
+                <code>
+                    div roll="alert" <br>
+                        Hello World <br>
+                    /div
+                </code> <br>
+                <a href="https://developer.mozilla.org/ru/docs/Web/Accessibility/ARIA/Roles" target="blank">  Все роли</a>
+            </div>
+            <div class="small">
+                <ul>
+                    <li>Роли виджетов (button, radio, tab, tooltip, treeitem...)</li>
+                    <li>Составние роли (radiogroup, tree, menu, tablist...)</li>
+                    <li> Структурные роли (article, heading, group, img...)</li>
+                    <li>Landmarks(ориентиры) (main, navigation. region...)</li>
+                </ul>
+            </div>
+        </div>
+
+        <style>
+            .slide-aria {
+                text-align: center;
+
+            }
+            .slide-aria h2,h4 {
+                margin: 16px;
+            }
+            #aria .small {
+                font-size: 16px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <ul>
+            <li>У елемента не может быть больше одной роли</li>
+            <li> Не рекомендуется применять противоречащие роли к семантическим элементам</li>
+            <li><a href="https://www.w3.org/TR/html-aria/" target="blank">Таблица с рекомендация по использованию ролей</a></li>
+        </ul>
+        <p>Атрибуты ARIA немного отличаются от ролей ARIA. Они также добавляются в разметку, но существует уже определенный диапазон атрибутов ARIA. Все атрибуты используют префикс aria- и делятся на две группы: состояния и свойства.</p>
+    </section>
+
+    <section class="slide" id="aria-attr">
+        <p>Атрибуты состояния:</p>
+        <code>aria-disabled, aria-hidden, aria-invalid, aria-checked, aria-expanded</code>
+        <p>Атрибуты свойства:</p>
+        <code>aria-haspopup, aria-autocomplete, aria-label, aria-required, aria-sort, aris-readonly</code>
+        <p>Live regions:</p>
+        <code> role="alert" <br> aria-live="assertive" <br> aria-live="polite"</code>
+        <style>
+            #aria-attr p{
+                font-weight: 700;
+                line-height: 1;
+                margin-top: 8px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="testing">
+        <h3>Инструменты для тестирования доступности</h3>
+        <div>
+            <h4>DevTools</h4>
+            <img src="pictures/4.png" alt="web-accessibility">
+        </div>
+        <style>
+            #testing img {
+                width: 100%;
+                height: auto;;
+            }
+            #testing h3 {
+                font-size: 30px;
+                margin-bottom: 14px;
+                text-align: center;
+            }
+            #testing h4 {
+                margin: 14px 0;
+                line-height: 1;
+            }
+            #testing {
+                padding-top: 40px;
+            }
+        </style>
+    </section>
+
+    <section class="slide" id="testing">
+        <div>
+            <h4>Axe Accessibility</h4>
+            <img src="pictures/5.png" alt="web-accessibility">
+        </div>
+    </section>
+    <section class="slide" id="testing">
+        <div>
+            <h4>Wave</h4>
+            <img src="pictures/6.png" alt="web-accessibility">
+        </div>
+    </section>
+    <section class="slide" id="end">
+        <h2>Спасибо!</h2>
+        <style>
+            #end {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </section>
+
+    <footer class="badge">
+        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.js"></script>
+
+</body>
+</html>
